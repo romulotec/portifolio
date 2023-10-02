@@ -10,7 +10,30 @@
 .texto_dinamico {
     color: #fff;
     font-size: 150%;
+    
 }
+
+#dynamicText {
+    color: #fc5c00;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+#dynamicText::after {
+    content: "|";
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+    }
+}
+
 
 .sobre_mim {
     font-size: 30px;
@@ -21,6 +44,7 @@
     color: #fff;
     font-style: normal;
     font-family: 'Poppins';
+    font-size: 15px;
     width: 90%;
     height: 100%;
 }
@@ -33,6 +57,30 @@
     50%{
         opacity: 0;
     }
+}
+/*pagina de obrigado pelo envio do e-mail*/
+.pagobrigado {
+    font-family: 'Poppins';
+    font-size: 25px;
+    text-align: center;
+    background-color: rgb(203, 201, 201);
+    color: #050505;
+ 
+
+}
+
+.b{
+    font-family: 'Poppins';
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.vulcano{
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+
 }
 
 /* -------- End Block Write texto --------- */
